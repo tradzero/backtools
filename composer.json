@@ -1,0 +1,19 @@
+{
+    "name": "Tonglei/backtools",
+    "description": "laravel 后台初始化脚手架",
+    "authors": [
+        {
+            "name": "ZHANGXIANGLIANG",
+            "email": "326277403@qq.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "TongLei\\BackTools\\": "src/"
+        }
+    },
+    "require": {}
+}
