@@ -1,6 +1,8 @@
 {
-    "name": "Tonglei/backtools",
+    "name": "tonglei/backtools",
     "description": "laravel 后台初始化脚手架",
+    "type": "utils",
+    "license": "mit",
     "authors": [
         {
             "name": "ZHANGXIANGLIANG",
