@@ -3,12 +3,13 @@
     <ul class="notification-menu">
         <li>
             <a href="javascript:;" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                {{ auth()->user()->nickname }}
+                <!-- {{ auth()->user()->nickname }} -->
+                管理员
                 <span class=" fa fa-angle-down"></span>
             </a>
             <ul class="dropdown-menu dropdown-usermenu purple pull-right">
                 <li>
-                    <a href="{{ route('admin.logout') }}">退出登录</a>
+                    <a href="">退出登录</a>
                 </li>
             </ul>
         </li>
