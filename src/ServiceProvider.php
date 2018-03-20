@@ -14,9 +14,11 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function boot()
     {
-        $this->commands([
-            PublishesCommands::class,
-        ]);
+        // 注册命令
+        $this->commands([ InitCommands::class ]);
+
+        // 加载路由
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     }
 
     /**
@@ -26,6 +28,5 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function register()
     {
-        //
     }
 }
