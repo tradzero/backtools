@@ -10,7 +10,7 @@
             <li>
                 <h3 class="navigation-title">{{ config('app.name') }}后台</h3>
             </li>
-            <li class="{{ menuIsActive('') ? 'active' : '' }}">
+            <li class="{{ request()->is('/') ? 'active' : '' }}">
                 <a href="">
                     <i class="fa fa-home"></i>
                     <span>首页</span>
