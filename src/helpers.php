@@ -1,6 +1,50 @@
 <?php
 
 /*
+ * AWS S3 帮助函数
+ */
+if (!function_exists('s3_presigned')) {
+    public function s3_presigned($album, $key, $contentType) {
+        // 创建 aws & s3 客户端
+        $aws = new \Aws\Sdk(config('backtool.aws'));
+        $s3 = App::make('aws')->createClient('s3');
+
+        // 读取配置 和 检查配置
+        $config = config("backtool.s3.{$album}");
+
+        // 创建 cmd
+        $cmd = $s3->getCommand('putObject', [
+            'Key'         => $key,
+            'AlbumName'   => $album,
+            'ContentType' => $contentType,
+            'ACL'         => $config['ACL'],
+            'Bucket'      => $config['bucket'],
+            'Expires'     => $config['expires'],
+        ]);
+
+        // 生成请求
+        $baseUrl = config('backtool.s3.url');
+        $presigned = (string)$s3->createPresignedRequest($cmd, '+2 minutes')->getUri()
+        return compact('baseUrl', 'presigned');
+    }
+}
+
+/*
+ * Qiniu 帮助函数
+ */
+if (!function_exists('qiniu_presigned')) {
+    public function qiniu_presigned() {
+        $access = config('backtool.qiniu.access_key');
+        $secret = config('backtool.qiniu.secret_key');
+        $qiniu = new \Qiniu\Auth($access, $secret);
+
+        $baseUrl = config('backtool.qiniu.bucket');
+        $presigned = $qiniu->uploadtoken($baseUrl);
+        return compact('baseUrl', 'presigned');
+    }
+}
+
+/*
  * 获取表单数据 或 old() 数据
  */
 if (!function_exists('get_blade_input_value')) {
