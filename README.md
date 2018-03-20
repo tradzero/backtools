@@ -8,8 +8,28 @@ Laravel 后台初始化脚手架，主题框架为基于 BootStrap 的 SlickLab
 * 添加 TongLei\BackTools\ServiceProvider::class 到 config/app.php
 * 运行 php artisan backtools:publishes 加载资源文件
 
-## 帮助函数
-### 后台表单
+
+## Qiniu 文件上传
+##### 配置
+在 .env 文件中配置下面参数
+
+```
+QN_ACCESS_KEY
+QN_SECRET_KEY
+QN_BUCKET
+QN_DOMAIN
+```
+
+## AWS 文件上传
+##### 配置
+在 .env 文件中配置下面参数, 并且在 `config/backtool` 中配置 aws 相关参数
+
+```
+S3_KEY
+S3_SECRET
+```
+
+## Blade 帮助函数
 
 ##### get_blade_carbon_value - 获取 Carbon 类型数据
 
