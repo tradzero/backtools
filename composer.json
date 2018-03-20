@@ -19,7 +19,7 @@
     ],
     "require": {
         "qiniu/php-sdk": "^7.2",
-        "aws/aws-sdk-php": "~3.0",
+        "aws/aws-sdk-php": "~3.0"
     },
     "autoload": {
         "files": [
