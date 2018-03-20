@@ -28,6 +28,5 @@
         "psr-4": {
             "TongLei\\BackTools\\": "src/"
         }
-    },
-    "require": {}
+    }
 }

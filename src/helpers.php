@@ -4,7 +4,7 @@
  * AWS S3 帮助函数
  */
 if (!function_exists('s3_presigned')) {
-    public function s3_presigned($album, $key, $contentType) {
+    function s3_presigned($album, $key, $contentType) {
         // 创建 aws & s3 客户端
         $aws = new \Aws\Sdk(config('backtool.aws'));
         $s3 = App::make('aws')->createClient('s3');
@@ -33,7 +33,7 @@ if (!function_exists('s3_presigned')) {
  * Qiniu 帮助函数
  */
 if (!function_exists('qiniu_presigned')) {
-    public function qiniu_presigned() {
+    function qiniu_presigned() {
         $access = config('backtool.qiniu.access_key');
         $secret = config('backtool.qiniu.secret_key');
         $qiniu = new \Qiniu\Auth($access, $secret);
