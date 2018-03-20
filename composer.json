@@ -7,8 +7,20 @@
         {
             "name": "ZHANGXIANGLIANG",
             "email": "326277403@qq.com"
+        },
+        {
+            "name": "tradzero",
+            "email": "admin@drakframe.com"
+        },
+        {
+            "name": "hitman",
+            "email": "404@not.found"
         }
     ],
+    "require": {
+        "qiniu/php-sdk": "^7.2",
+        "aws/aws-sdk-php": "~3.0",
+    },
     "autoload": {
         "files": [
             "src/helpers.php"
