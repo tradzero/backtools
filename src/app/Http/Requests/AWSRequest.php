@@ -27,7 +27,7 @@ class AWSRequest extends FormRequest
         return [
             'filename' => ['required'],
             'filetype' => ['required'],
-            'album'   => ['required', Rule::in(config('aws.albums'))],
+            'album'   => ['required', Rule::in(config('backtool.s3.albums'))],
         ];
     }
 }

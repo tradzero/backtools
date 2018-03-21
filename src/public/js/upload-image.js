@@ -23,7 +23,7 @@ Vue.component('image-upload', {
   },
   methods: {
     clickButton: function () {
-      this.$refs[this.refButtonName].click();
+      this.$refs[this.refInputName].click();
     },
     getImageFileParams: function (file) {
       var type = file.type;
