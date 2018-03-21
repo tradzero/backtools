@@ -14,20 +14,26 @@ Laravel 后台初始化脚手架，主题框架为基于 BootStrap 的 SlickLab
 在 .env 文件中配置下面参数
 
 ```
-QN_ACCESS_KEY
-QN_SECRET_KEY
-QN_BUCKET
-QN_DOMAIN
+QN_ACCESS_KEY=
+QN_SECRET_KEY=
+QN_BUCKET=
+QN_DOMAIN=
 ```
+
+##### 使用
+还未完成，等下次项目有需求再做。
 
 ## AWS 文件上传
 ##### 配置
 在 .env 文件中配置下面参数, 并且在 `config/backtool` 中配置 aws 相关参数
 
 ```
-S3_KEY
-S3_SECRET
+S3_KEY=
+S3_SECRET=
 ```
+
+##### 使用
+在 `views/snippets/image-upload.blade.php` 有参考的模板
 
 ## Blade 帮助函数
 
