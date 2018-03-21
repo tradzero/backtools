@@ -6,7 +6,7 @@ use Illuminate\Foundation\Console\VendorPublishCommand;
 
 class InitCommands extends VendorPublishCommand
 {
-    protected $signature = 'backtools:init';
+    protected $signature = 'backtools:init {--force : 强制覆盖已经存在的文件}';
 
     protected $description = '生成基础 blade 模板 和 配置数据';
 

@@ -6,8 +6,8 @@
 if (!function_exists('s3_presigned')) {
     function s3_presigned($album, $key, $contentType) {
         // 创建 aws & s3 客户端
-        $aws = new \Aws\Sdk(config('backtool.aws'));
-        $s3 = App::make('aws')->createClient('s3');
+        $aws = new \Aws\Sdk(config('backtool.s3'));
+        $s3 = $aws->createClient('s3');
 
         // 读取配置 和 检查配置
         $config = config("backtool.s3.{$album}");
@@ -24,8 +24,8 @@ if (!function_exists('s3_presigned')) {
 
         // 生成请求
         $baseUrl = config('backtool.s3.url');
-        $presigned = (string)$s3->createPresignedRequest($cmd, '+2 minutes')->getUri()
-        return compact('baseUrl', 'presigned');
+        $signedUrl = (string)$s3->createPresignedRequest($cmd, '+2 minutes')->getUri();
+        return compact('baseUrl', 'signedUrl');
     }
 }
 
@@ -39,8 +39,8 @@ if (!function_exists('qiniu_presigned')) {
         $qiniu = new \Qiniu\Auth($access, $secret);
 
         $baseUrl = config('backtool.qiniu.bucket');
-        $presigned = $qiniu->uploadtoken($baseUrl);
-        return compact('baseUrl', 'presigned');
+        $signedUrl = $qiniu->uploadtoken($baseUrl);
+        return compact('baseUrl', 'signedUrl');
     }
 }
 

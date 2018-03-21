@@ -2,7 +2,7 @@
 
 namespace TongLei\BackTools\App\Http\Controllers;
 
-use Illuminate\Routing\Controller as Controller;
+use Illuminate\Routing\Controller as BaseController;
 use TongLei\BackTools\App\Http\Requests\AWSRequest;
 
 class Controller extends BaseController

@@ -3,7 +3,7 @@
 namespace TongLei\BackTools;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
-use TongLei\BackTools\Commands\PublishesCommands;
+use TongLei\BackTools\Commands\InitCommands;
 
 class ServiceProvider extends LaravelServiceProvider
 {
@@ -18,7 +18,7 @@ class ServiceProvider extends LaravelServiceProvider
         $this->commands([ InitCommands::class ]);
 
         // 加载路由
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
     }
 
     /**
