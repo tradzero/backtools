@@ -41,8 +41,9 @@ return [
             'vue' => '//cdn.bootcss.com/vue/2.2.6/vue.min.js',
             'sweetalert' => '//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js',
             'axios' => '//cdn.bootcss.com/axios/0.16.1/axios.min.js',
-            'upload-image' => 'backtools/js/upload-image.js',
+            'upload-image' => '/backtools/js/upload-image.js',
             'uuid' => '//cdn.bootcss.com/node-uuid/1.4.8/uuid.min.js',
+            'tool' => '/backtools/js/tool.js',
         ],
         'css' => [
             'sweetalert' => '//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.css',
