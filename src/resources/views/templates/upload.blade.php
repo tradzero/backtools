@@ -14,6 +14,7 @@
             category="test"
             placeholder="请上传封面"
             base-url="{{config('backtool.s3.url')}}"
+            input-name="logo"
             presigned-url="{{route('backtool.s3.presigned')}}">
         </image-upload>
     </div>

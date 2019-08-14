@@ -9,6 +9,7 @@
         <span v-else
           class="control-label"
           v-text="placeholder"></span>
+        <input type="hidden" :name="name" :value="image ? baseUrl + image: ''">
       </div>
     </div>
     <div class="col-sm-1 col-5-1">
