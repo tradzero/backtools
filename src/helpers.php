@@ -21,7 +21,7 @@ if (!function_exists('s3_presigned')) {
             'ContentType' => $contentType,
             'ACL'         => $config['ACL'],
             'Bucket'      => $config['bucket'],
-            'Expires'     => $config['expires'],
+            // 'Expires'     => $config['expires'],
         ]);
 
         // 生成请求
